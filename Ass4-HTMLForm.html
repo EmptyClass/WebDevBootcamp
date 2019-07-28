@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Latihan Menggunakan HTML Form</title>
+</head>
+
+<body>
+    <h2>Register</h2>
+    <form>
+        <div>
+            <label for="FirstName">First Name: 
+                <input type="text" name="FName" id="FirstName" required placeholder="Rizka">
+            </label>
+            <label for="LastName">Last Name:
+                <input type="text" name="LName" id="LasttName" required placeholder="Ardiansyah">
+            </label>
+        </div>
+        <div>
+            <label for="GWanita"> Wanita
+                <input type="radio" name="GenderSel" id="GWanita" value="wanita" required checked>
+            </label>
+            <label for="GPria"> Pria
+                <input type="radio" name="GenderSel" id="GPria" value="pria" required>
+            </label>
+            <label for="GOther"> Other
+                <input type="radio" name="GenderSel" id="GOther" value="other" required>
+            </label>
+        </div>
+        <div>
+            <label for="txtEmail">Email: 
+                <input type="email" name="Email" id="txtEmail" required placeholder="Email">
+            </label>
+            <label>Password: 
+                <input type="password" name="Pass" id="txtPass" required placeholder="Password" pattern=".{5,10}" title="Masukkan password 5 hingga 10 karakter">
+            </label>
+        </div>
+        <div>
+            <label>Hari Lahir: 
+               <select name="Bulan" id="tbBulan" required>
+                   <option value="1">Bulan</option>
+                   <option value="Januari">Januari</option>
+                   <option value="Februari">February</option>
+                   <option value="Maret">Maret</option>
+               </select>
+               <select name="Tanggal" id="tbTanggal" required>
+                   <option value="">Tanggal</option>
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+               </select>
+               <select name="Tahun" id="tbtahun" required>
+                   <option value="">Tahun</option>
+                   <option value="2019">2019</option>
+                   <option value="2018">2018</option>
+                   <option value="2017">2017</option>
+               </select>
+            </label>
+        </div>
+        <div>
+            <Label for="cbTnc">I Agree the terms and Condition 
+                <input type="checkbox" name="tnc" id="cbTnc" required>
+            </Label>
+        </div>
+        <input type="submit" value="Kirim">
+    </form>
+    <br>
+    <br>
+    <h2>Login</h2>
+    <!-- Action - kemana form akan mengirimkan data -->
+    <!-- method - metode HTTP apa yang digunakan (Post - Data dibawa melalui parameter pesan di body/Get - data dibawa melalui URL) -->
+    <!--required - atribut boolean pada tag input untuk menandai bahwa input tidak boleh kosong-->
+    <form action="https://www.wikipedia.org" method="POST">
+        <input name="Username" type="text" placeholder="Username" required="true">
+        <input name="Password" type="password" placeholder="Password">
+        <input type="submit">
+    </form><br>
+    <h2>Login</h2>
+    <!-- Simple Input Validation using "required" and input type -->
+    <form action="https://www.facebook.com" method="POST">
+        <label for="email">Email: </label>
+        <input id="email" type="email" placeholder="Email" required="true">
+        <label for="password">Password: </label>
+        <input id="password" type="password" placeholder="Password" required="true">
+        <input type="submit">
+    </form>
+    <h2>Demo Radio Button</h2>
+    <!--Attribut "name" fungsinya untuk mengelompokkan / binding input dan keperluan pengiriman data -->
+
+    <form>
+        <p>Hewan yang paling kamu suka : </p>
+        <label for="anjing">Anjing </label>
+        <input type="radio" name="hewanKesukaan" id="anjing" value="anjing">
+        <!--value mengindikasikan RB dengan id anjing menyimpan nilai anjing -->
+        <label for="kucing">Kucing</label>
+        <input type="radio" name="hewanKesukaan" id="kucing" value="kucing">
+        <br>
+        <p>Apa warna favoritmu ?</p>
+        <!--Demo Dropdown-->
+        <select name="warnaKesukaan">
+            <option value="merah">:)</option> <!--Mendevinisikan value berarti kita mendefinisikan ulang nilai yang dimuat-->
+            <option>Kuning</option>
+            <option>Hijau</option>
+        </select>
+        <p>Deskripsikan diri anda ? </p>
+        <textarea name="deskripsi" rows="30" cols="30"></textarea>
+        <button>Go!</button>
+    </form>
+    <hr>
+    <h1>Contact Me</h1>
+    <form action="mailto:ardi.focxconn@yahoo.com" method="POST" enctype="text/plain">
+        <input type="text" name="nama" placeholder="Nama" required pattern=".{2,10}" title="Username 2-10 karakter"><br>
+        <input type="email" name="email" placeholder="email" required><br>
+        <textarea name="pesan" id="" cols="30" rows="10" placeholder="pesan"></textarea>
+        <input type="submit">
+    </form>
+
+
+    <!---
+    <form>
+
+        <label for="username">Username : </label>
+        <input id="username" type="text"> <br>
+
+        <label for="username">Username : <input type="text"></label><br>
+
+        <label>Nama Depan <input type="text"> </label> <br>
+        <b>Nama Belakang : </b><input type="text"> <br>
+        <b>Tanggal Lahir : </b><input type="datetime"> <br>
+        <b>Warna kesukaan : </b><input type="color"> <br>
+        <b>Jenis Kelamin : </b><input type="radio"> <br>
+        <b>Masukkan Foto Anda : </b><input type="file"> <br>
+        <br>
+        <input type="button" value="Daftar" onclick="">
+        <input type="button" value="Reset" onclick="">
+    </form>-->
+</body>
+
+</html>
